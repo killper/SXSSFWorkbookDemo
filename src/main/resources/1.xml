@@ -1,0 +1,4 @@
+<xml-fragment r="A2" s="1" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:x14ac="http://schemas.microsoft.com/office/spreadsheetml/2009/9/ac" xmlns:main="http://schemas.openxmlformats.org/spreadsheetml/2006/main">
+  <main:f>SUM(B2:C2)</main:f>
+  <main:v>0</main:v>
+</xml-fragment>
