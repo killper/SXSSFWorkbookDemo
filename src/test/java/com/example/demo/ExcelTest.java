@@ -56,13 +56,18 @@ public class ExcelTest extends DefaultHandler {
   public void testSxssf() {
     String path = PATH.concat(File.separator).concat("3.xlsx");
     XSSFWorkbook xssfWorkbook;
+    Long time = System.currentTimeMillis();
     try (FileInputStream inputStream = new FileInputStream(path)) {
       xssfWorkbook = new XSSFWorkbook(inputStream);
       SXSSFWorkbook sxssfWorkbook = exportExcelService.exportExcelOne(xssfWorkbook);
+      //删除flush到本地磁盘的临时文件，避免长时间不删除，磁盘空间占满
+   /*   sxssfWorkbook.dispose();*/
       ExcelUtil.output(PATH.concat(File.separator).concat("4.xlsx"), sxssfWorkbook);
     } catch (Exception e) {
       log.error("", e);
     }
+    Long time1 = System.currentTimeMillis();
+    log.info("消耗时间：{}", (time1 - time) / 1000);
   }
 
   /*

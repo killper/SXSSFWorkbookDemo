@@ -30,7 +30,7 @@ public class ExportExcelService {
     log.info(customProperties.getProperty("ip").getLpwstr());
 
     int sheetNumber = workbook.getNumberOfSheets();
-    SXSSFWorkbook sxssfWorkbook = new SXSSFWorkbook(workbook, -1);
+    SXSSFWorkbook sxssfWorkbook = new SXSSFWorkbook(workbook, 10000);
     //excel属性保存
     POIXMLProperties.CustomProperties customProperties1 = sxssfWorkbook.getXSSFWorkbook()
         .getProperties()
